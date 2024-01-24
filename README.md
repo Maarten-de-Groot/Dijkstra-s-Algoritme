@@ -6,8 +6,8 @@ Welkom bij deze repository waarin we een toegankelijke implementatie van het Dij
 ## Inhoudsopgave
 1. [Introductie](#introductie)
 2. [Wat is Dijkstra's Algoritme?](#wat-is-dijkstras-algoritme)
-3. [Hoe Werkt Onze Code?](#hoe-werkt-onze-code)
-4. [Hoe Gebruik Je Deze Code?](#hoe-gebruik-je-deze-code)
+3. [Hoe werkt onze Code?](#hoe-werkt-onze-code)
+4. [Hoe gebruik je deze code?](#hoe-gebruik-je-deze-code)
 5. [Bijdragen](#bijdragen)
 6. [Licentie](#licentie)
 
