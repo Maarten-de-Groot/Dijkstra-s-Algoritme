@@ -23,6 +23,16 @@ Onze code bestaat uit twee belangrijke delen:
 2. **Zoekfunctie naar specifieke eindnodes**: Dit deel gebruikt het Dijkstra algoritme om het kortste pad naar een specifieke set van eindpunten te vinden.
 
 ## Hoe gebruik je deze code?
+### Stap 0: Clonen en Importeren van de Library
+**Let op**: Zorg ervoor dat je de 'dijkstra.py'-file in dezelfde map hebt als je script. Als je de 'dijkstra.py'-file niet in dezelfde map hebt, zal de import mislukken. Zorg ervoor dat je de 'dijkstra.py'-file vanuit de repository hebt gekopieerd naar je werkmap.
+
+```python
+# Importeer de library in je Python-script
+from dijkstra import dijkstra_shortest_path_to_end_nodes
+
+# ... (Ga verder met de stappen hieronder)
+```
+
 ### Stap 1: Definieer je netwerk
 Je netwerk bestaat uit punten (nodes) en de afstanden tussen hen (edges). Hier is een voorbeeld van hoe je dit kunt definiëren:
 
