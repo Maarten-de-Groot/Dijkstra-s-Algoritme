@@ -89,27 +89,6 @@ def dijkstra_shortest_path_to_end_nodes(graph, start, end_nodes):
 
     return shortest_distance_node, shortest_distance
 
-# Definieer de grafiek op basis van de gegeven knooppunten en afstanden
-graph = {
-    "A": {"B": 5},
-    "B": {"A": 5, "C": 3, "D": 4, "E": 6},
-    "C": {"B": 3, "E": 2},
-    "D": {"B": 4, "F": 4},
-    "E": {"B": 6, "C": 2, "F": 3, "G": 7, "H": 5},
-    "F": {"D": 4, "E": 3},
-    "G": {"E": 7},
-    "H": {"E": 5, "I": 4},
-    "I": {"H": 4, "J": 6},
-    "J": {"I": 6, "K": 5},
-    "K": {"J": 5}
-}
-
-# Lijst van eindnodes, bijvoorbeeld 'G', 'H', 'I', 'J', 'K'
-end_nodes = ['G', 'H', 'I', 'J', 'K']
-
-# Vind de kortste afstand van de startnode 'A' naar de dichtstbijzijnde eindnode
-shortest_end_node, shortest_distance = dijkstra_shortest_path_to_end_nodes(graph, 'A', end_nodes)
-
 # Voorkom dat het script wordt uitgevoerd als het direct wordt aangeroepen
 if __name__ == "__main__":
     print("Dit script is bedoeld om geïmporteerd te worden, niet om direct uitgevoerd te worden.")
