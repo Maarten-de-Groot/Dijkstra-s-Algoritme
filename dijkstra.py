@@ -89,6 +89,48 @@ def dijkstra_shortest_path_to_end_nodes(graph, start, end_nodes):
 
     return shortest_distance_node, shortest_distance
 
+def dijkstra_full_path(graph, start, end):
+    """
+    Implementatie van Dijkstra's algoritme om het volledige pad van startnode naar eindnode te vinden.
+
+    Parameters:
+    graph (dict): Een grafiek weergegeven als een dictionary waarbij elke node
+                  een dictionary van buren en hun respectievelijke afstanden bevat.
+    start (str): De startnode in de grafiek.
+    end (str): De eindnode in de grafiek.
+
+    Returns:
+    list: Een lijst van nodes die het pad van start naar eind vormt.
+    """
+    distances = {node: float('infinity') for node in graph}
+    previous_nodes = {node: None for node in graph}
+    distances[start] = 0
+    queue = [(0, start)]
+
+    while queue:
+        current_distance, current_node = heapq.heappop(queue)
+
+        # Als we de eindnode bereiken, stop dan
+        if current_node == end:
+            break
+
+        for neighbor, weight in graph[current_node].items():
+            distance = current_distance + weight
+
+            if distance < distances[neighbor]:
+                distances[neighbor] = distance
+                previous_nodes[neighbor] = current_node
+                heapq.heappush(queue, (distance, neighbor))
+
+    # Bouw het pad van eind naar start
+    path = []
+    current_node = end
+    while current_node is not None:
+        path.insert(0, current_node)
+        current_node = previous_nodes[current_node]
+
+    return path if path[0] == start else "Geen pad gevonden."
+
 # Voorkom dat het script wordt uitgevoerd als het direct wordt aangeroepen
 if __name__ == "__main__":
     print("Dit script is bedoeld om geïmporteerd te worden, niet om direct uitgevoerd te worden.")
