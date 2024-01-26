@@ -83,6 +83,10 @@ def dijkstra_shortest_path_to_end_nodes(graph, start, end_nodes):
     # Filter de resultaten om alleen de afstanden naar de eindnodes te tonen
     end_node_distances = {node: distances[node] for node in end_nodes if node in distances}
 
+    # Check of er eindnodes bereikbaar zijn
+    if not end_node_distances:
+        return "Geen van de eindnodes is bereikbaar vanaf de startnode."
+
     # Vind de kortste afstand en bijbehorende node onder de eindnodes
     shortest_distance_node = min(end_node_distances, key=end_node_distances.get)
     shortest_distance = end_node_distances[shortest_distance_node]
