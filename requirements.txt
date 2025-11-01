@@ -1,0 +1,6 @@
+# Requirements voor development en testing
+# Deze library gebruikt alleen de standaardbibliotheek, dus geen externe dependencies nodig voor productiegebruik.
+
+# Alleen nodig voor het draaien van tests
+pytest>=7.0.0
+
